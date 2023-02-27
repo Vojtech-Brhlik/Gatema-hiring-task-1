@@ -171,5 +171,5 @@ elif sys.argv[1] == "-funkce2":
 
 # For other arguments, exit with code 22
 else:
-    print("ERROR(22): Incorrect arguments")
+    print("ERROR(22): Incorrect arguments.")
     exit(22)
