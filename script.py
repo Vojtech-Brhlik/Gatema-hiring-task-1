@@ -15,7 +15,7 @@ import os.path              # os.path.exists
 
 # Function used for the group sorting
 def sort_fn(group):
-    split = re.split(r"T0", group[0])
+    split = re.split(r"T", group[0])
     return split[1]
 
 # Function returns X and Y values
@@ -98,7 +98,12 @@ def F2(lines):
     X_max = None
     Y_min = None
     Y_max = None
-       
+    
+    """ Go through each line and find the highest and lowest coordinates.
+        ...
+        I am not very happy with this solution, but it works and it does not require other imports. 
+        I considered putting all of the values into a list and then running min() and max() functions, 
+        but this solution is more memory friendly."""
     for line in lines:
        
         # Check for correct format of inscturtions
